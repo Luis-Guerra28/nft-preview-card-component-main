@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+/* Genreal */
+* {box-sizing: border-box}
+
+html, body{
+    height: 100%;
+}
+
+body {
+    background-color: hsl(217, 54%, 11%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: hsl(0, 0%, 70%);
+}
+
+a {
+    font-weight: 600;
+    text-decoration: none;
+    color:hsl(0, 0%, 100%);
+}
+
+a:hover {
+    color:hsl(178, 100%, 50%)
+}
+
+/* Card */
+.card {
+    background-color: hsl(216, 50%, 16%);
+    max-width: 400px;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 2rem 2rem 0.5rem hsla(0, 0%, 0%, 0.418);
+}
+
+.container-main-image {
+    position: relative;
+    border-radius: 1rem;
+    width: 100%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.container-main-image::after {
+    content: url(./images/icon-view.svg);
+    background: hsl(178, 100%, 50%, 0.5);
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.25s ease;
+}
+
+.container-main-image:hover::after {
+    opacity: 1;
+}
+
+.main-pic {
+    width: 100%;
+    display:block;
+}
+
+.value-time {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+
+
+.value {
+    color: hsl(178, 100%, 50%);
+}
+
+.time-elapsed {
+    color: hsl(215, 51%, 70%);
+}
+
+.line {
+    color: hsl(215, 32%, 27%);
+}
+
+.creator{
+    display: flex;
+    align-items: center;
+}
+
+.creator-description {
+    margin-left: 1rem;
+}
+
+.creator img {
+    height: 2rem;
+    border-radius: 1rem;
+    border: solid 1px white;
+}
